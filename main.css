@@ -1,0 +1,150 @@
+body{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+    
+}
+#left{
+    width: 20%;
+    float:left;
+    height: 100vh;
+    background: #FFE6CC;
+}
+
+#right{
+    width: 80%;
+    float:right;
+    height: 100vh;
+    background-color: #DAE8FC;
+}  
+#notesHeading{
+    padding: 1em;
+    text-align: center;
+}
+#leftHeading{
+    width: 70%;
+    float:left;
+}
+#rigthHeading{
+    width: 30%;
+    float:right;
+    text-align: center;
+    
+}
+@media only screen and (max-width: 840px) {
+    #leftHeadingNotes{
+        width: 40%;
+        float:left;
+        font-weight: bold;
+    }
+    #rigthHeadingNotes{
+        width: 60%;
+        float:right;
+    }  
+    .time{
+        font-size: small;
+        margin-right: 1.1em;
+    }
+    .btn{
+        margin-left: 25%;
+    }
+    .content{
+        width: 75% !important;
+        height: 40%;
+        padding: 1em;
+    }
+    
+}
+#leftHeadingNotes{
+    width: 75%;
+    float:left;
+    font-weight: bold;
+}
+#rigthHeadingNotes{
+    width: 25%;
+    float:right;
+}  
+
+#leftHeadingNotesContent{
+    width: 90%;
+    margin: 1em;
+    font-weight: bold;
+}
+#rigthHeadingNotesContent{
+    width: 10%;
+    float:right;
+}  
+.btn{
+    cursor: pointer;
+    border: transparent;    
+    background-color: transparent;
+        color: black;
+        font-size: 1.5em;
+        
+}
+.notesHeadingObj{
+    background-color: #FFF2CC;
+    border: 1px solid #D6B656;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    
+}
+.notesHeadingObj:hover{
+    background-color: #DAE8FC ;
+    border: 1pt solid #6C8EBF;
+}
+#del{
+    background-color: #E51400;
+    border-radius: 4pt;
+    padding: .5em;
+    color: white;
+    border: 2pt solid #B20000;
+    margin-top: 1em;
+}
+#save{
+    background-color: green;
+    border-radius: 4pt;
+    padding: .5em; 
+    margin-right: 1em;
+    color: white;
+    border: 3pt solid lightgreen;
+    margin-top: 1em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul{
+      padding: 0;
+  }
+  ul li {
+    cursor: pointer;
+    position: relative;
+    background: #FFF2CC;
+    border: 1px solid #D6B656;
+    font-size: 18px;
+    padding: 1em;
+    transition: 0.2s;
+    color: #000000;
+    list-style: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  ul li:hover {
+    background-color: #DAE8FC ;
+    border: 1pt solid #6C8EBF;
+  }
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    /*text-decoration: line-through;*/
+  }

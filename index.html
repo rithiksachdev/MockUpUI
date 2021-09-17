@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="content">
+        <div id="left">
+           <div id="notesHeading">
+               <div class="center">Notes</div>
+            </div>
+           <div id="notes">
+                   <input id="leftHeading" class="notesHeadingObj" placeholder="Heading">
+                   <input class="btn" type="button" style="padding-top: .5em; padding-left: .5em;" value="+" id="rightHeading" onclick="newNote()" />
+           </div>
+           <ul id="notesList"></ul>
+        </div>
+      
+        <div id="right">
+            <div id="notesHeading">
+                <label id="leftHeadingNotes" placeholder="Notes Heading">Notes Heading</label>
+                <div id="rightHeadingNotes" class="time" >Time</div>
+             </div>
+            <textarea id="leftHeadingNotesContent" class="content" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></textarea>
+            <br>
+            <div class="center">
+                <input type="button" id="save" onclick="saveNote()" value="Save note">
+                <input type="button" id="del" onclick="deleteNote()" value="Delete note">
+
+            </div>
+        </div>
+      </div>
+<script>
+    
+    var list = document.querySelector('ul');
+		list.addEventListener('click', function(ev) {
+		var a = ev.target.getAttribute("id");
+        //alert(a);
+        //alert(headings[a]);
+        localStorage.note = a;
+        document.getElementById("leftHeadingNotes").innerHTML=headings[a];
+        if (content[a] == undefined)
+        {
+            document.getElementById("leftHeadingNotesContent").value = "";    
+        }
+        else{
+    	document.getElementById("leftHeadingNotesContent").value=content[a];   				    	
+        }	
+        document.getElementById("rightHeadingNotes").innerHTML = time[a];
+    }, false);
+</script>
+</body>
+</html>
